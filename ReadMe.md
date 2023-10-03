@@ -76,12 +76,40 @@ running api server
 #### login as admin
 
 ```http
-  GET /login/
+  GET /login
   
   param :
   username: admin
   password: admin
 ```
+
+#### register user
+
+```http
+  GET /register
+  
+  param :
+  username: {{username}}
+  password: {{password}}
+```
+
+### login user
+```http
+  GET /login
+  
+  param :
+  username: {{username}}
+  password: {{password}}
+```
+
+### Authorization
+
+To Access endpoint always using bearer Authorization
+
+```
+Bearer {{token from login}}
+```
+
 
 #### example operation
 
